@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/HassanMehmood413/React_JS_Complete_Practice-2024-/tree/main/showing%20alert%20(05)",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
