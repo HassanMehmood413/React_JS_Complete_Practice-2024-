@@ -1,5 +1,5 @@
 {
-  "homepage": "https://HassanMehmood413.github.io/showing alert (05)",
+  "homepage": "https://github.com/HassanMehmood413/React_JS_Complete_Practice-2024-/tree/main/showing%20alert%20(05)",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -7,12 +7,15 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
