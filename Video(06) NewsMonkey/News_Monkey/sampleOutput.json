@@ -1,0 +1,110 @@
+{
+    "status": "ok",
+    "totalResults": 37,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Leslie Josephs",
+            "title": "Boeing agrees to buy fuselage maker Spirit AeroSystems in $4.7 billion deal - CNBC",
+            "description": "Boeing is buying the supplier of fuselages as it looks for a way out of its manufacturing and safety crisis.",
+            "url": "https://www.cnbc.com/2024/07/01/boeing-to-buy-spirit-aerosystems.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/106307685-1576861638462gettyimages-98590875.jpeg?v=1593567129&w=1920&h=1080",
+            "publishedAt": "2024-07-01T04:11:41Z",
+            "content": "Boeing said Monday that it will buy back its struggling fuselage maker Spirit AeroSystems in an all-stock deal that the planemaker has said will improve safety and quality control.\r\nIt said it agreed… [+3389 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Billboard"
+            },
+            "author": "Joe Lynch",
+            "title": "2024 BET Awards Winners: See the Complete List (Updating) - Billboard",
+            "description": "2024 BET Awards winners list -- see who won.",
+            "url": "http://www.billboard.com/music/awards/2024-bet-awards-winners-1235721115/",
+            "urlToImage": "https://www.billboard.com/wp-content/uploads/2024/06/Usher-03-award-bet-awards-show-2024-billboard-1548.jpg?w=1024",
+            "publishedAt": "2024-07-01T04:07:30Z",
+            "content": "The 2024 BET Awards took place on Sunday (June 30) at the Peacock Theater in Los Angeles. The show saw Taraji P. Henson hosting for a third year. Drake had the most nominations, seven in total. Usher… [+4286 chars]"
+        },
+        {
+            "source": {
+                "id": "cbs-news",
+                "name": "CBS News"
+            },
+            "author": null,
+            "title": "Hurricane Beryl nears Caribbean islands as \"extremely dangerous\" Category 4 storm - CBS News",
+            "description": "Hurricane warnings are already in effect in Barbados, St. Lucia, Grenada, St. Vincent and the Grenadines and Tobago.",
+            "url": "https://www.cbsnews.com/news/hurricane-beryl-forecast-powerful-storm-caribbean-islands/",
+            "urlToImage": "https://assets2.cbsnewsstatic.com/hub/i/r/2024/06/29/6dcad20f-0101-460b-bf1f-75604b0c342a/thumbnail/1200x630/fa1105c23865c3e20c01e4b646b42c53/hurricane.jpg?v=a23cb4bdf4fa7f3cb72e5118085577f9",
+            "publishedAt": "2024-07-01T03:18:01Z",
+            "content": "Hurricane Beryl was closing in on the Windward Islands in the southeast Caribbean as an \"extremely dangerous\" Category 4 storm, the National Hurricane Center said Sunday night. Forecasters warned the… [+5305 chars]"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Mike Memoli, Monica Alba",
+            "title": "Biden's family urges him to 'keep fighting' as donors look for alternatives - NBC News",
+            "description": "A top Biden campaign official held a tense call with donors Sunday, laying out what would happen to the campaign infrastructure should Biden step aside — stressing he had no plans to do so.",
+            "url": "https://www.nbcnews.com/politics/joe-biden/bidens-family-keep-fighting-donors-alternatives-rcna159694",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2024-06/240628-joe-biden-debate-ew-1206p-698938.jpg",
+            "publishedAt": "2024-07-01T03:16:00Z",
+            "content": "WASHINGTON  As top Democrats offered a public show of support for President Joe Biden throughout the weekend, his advisers worked privately Sunday to push back against suggestions that he step aside,… [+4865 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "",
+            "title": "Transcendent once again, Simone Biles will lead U.S. Olympic gymnastics team in Paris - NPR",
+            "description": "For the 27-year-old gymnast, who has already won seven Olympic medals, the Games in 2024 are the next stop on her remarkable return to dominance after a two-year hiatus to tend to her mental health.",
+            "url": "https://www.npr.org/2024/06/30/g-s1-7388/simone-biles-gymnastics-usa-olympic-team",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4345x2444+0+452/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F21%2F91%2F07e940114a1c950c4858836c6322%2Fgettyimages-2160011025.jpg",
+            "publishedAt": "2024-07-01T02:52:51Z",
+            "content": "MINNEAPOLIS For most gymnasts, a slip off the balance beam, a foot outside the line on the floor exercise and too many steps after landing a vault could be enough to spoil a chance at victory.\r\nBut t… [+4409 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "San Francisco Chronicle"
+            },
+            "author": "Nora Mishanec",
+            "title": "'No Pride in Genocide': S.F. march accuses LGBTQ parade of 'pinkwashing' Palestinians' plight - San Francisco Chronicle",
+            "description": "More than 1,000 LGBTQ people boycotted the SF Pride Parade with an alternative march seeking support for Palestinians.",
+            "url": "https://www.sfchronicle.com/bayarea/article/pro-palestinian-pride-march-19544236.php",
+            "urlToImage": "https://s.hdnux.com/photos/01/40/40/46/25299333/3/rawImage.jpg",
+            "publishedAt": "2024-07-01T02:21:57Z",
+            "content": "Protesters at No Pride in Genocide, offered as an alternative to the SF Pride Parade, rally Sunday at Church and Market streets on behalf of Palestinians.\r\nCarlos Avila Gonzalez/The Chronicle\r\nHundre… [+3846 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters.com",
+            "title": "Australia doubles foreign student visa fee in migration crackdown - Reuters.com",
+            "description": null,
+            "url": "https://www.reuters.com/world/australia-doubles-foreign-student-visa-fee-migration-crackdown-2024-07-01/",
+            "urlToImage": null,
+            "publishedAt": "2024-07-01T01:53:43Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "bloomberg",
+                "name": "Bloomberg"
+            },
+            "author": "Silla Brush",
+            "title": "BlackRock Buys Preqin for $3.2 Billion in Private Data Expansion - Bloomberg",
+            "description": "BlackRock Inc. will acquire private capital database provider Preqin for £2.55 billion ($3.2 billion) in cash, as the world’s largest money manager accelerates its push to become a major player in alternative assets.",
+            "url": "https://www.bloomberg.com/news/articles/2024-07-01/blackrock-buys-preqin-for-3-2-billion-in-private-data-expansion",
+            "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itxX2JbBZZCc/v0/1200x800.jpg",
+            "publishedAt": "2024-07-01T01:35:00Z",
+            "content": "BlackRock Inc. will acquire private capital database provider Preqin for £2.55 billion ($3.2 billion) in cash, as the worlds largest money manager accelerates its push to become a major player in alt… [+245 chars]"
+        }
+    ]
+}
