@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #495057;
+}
+.name{
+  margin-left: 26px;
+  font-size: 23px;
+}
+.nav ul{
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+}
+
+.nav ul li{
+  font-size: 23px;
+  padding: 6px 7px;
+  margin: 0px 39px;
+  list-style: none;
+  cursor: pointer;
+  /* border-bottom-left-radius: 22px; */
+}
+.nav ul li:hover{
+  border-bottom: 4px solid rgb(0, 180, 216);
+ transform-origin: scale( 100% 50%);
+}
+.nav ul li img{
+  height: 37px;
+  width: 38px;
+  margin-left: 17px;
+}
+.navbar{
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e9ecef;
+  background: rgb(149 149 149);
+  font-family: "Playfair Display", serif;
+}
+.newslist{
+  color: white;
+}
