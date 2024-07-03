@@ -23,6 +23,10 @@ body{
   cursor: pointer;
   /* border-bottom-left-radius: 22px; */
 }
+.nav ul li a{
+  text-decoration: none;
+   color: #e9ecef;
+}
 .nav ul li:hover{
   border-bottom: 4px solid rgb(0, 180, 216);
  transform-origin: scale( 100% 50%);
@@ -105,3 +109,30 @@ body{
 .cards{
   padding: 0px 4px;
 }
+
+
+.btncontainer{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 57px;
+}
+.btncontainer button{
+  padding: 8px 23px;
+  border-radius: 11px;
+  border: none;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 42%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.spinner img{
+  height: 78px;
+  width: 78px;
+}
+
+

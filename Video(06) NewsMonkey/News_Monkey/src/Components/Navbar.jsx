@@ -15,10 +15,12 @@ export class Navbar extends Component {
 
         <div className='nav'>
           <ul>
-            <li>Home</li>
-            <li>Catagory</li>
-            <li>Latest</li>
-            <li>About</li>
+            <li><a href="/about">Home</a></li>
+            <li><a href="/about">Catagory</a></li>
+            <li><a href="/about">sports</a></li>
+            <li><a href="/about">science</a></li>
+            <li><a href="/about">food</a></li>
+            <li><a href="/about">About</a></li>
             <img src={night} alt="" />
           </ul>
         </div>
