@@ -23,6 +23,10 @@ body{
   cursor: pointer;
   /* border-bottom-left-radius: 22px; */
 }
+.nav ul li a{
+  color: #e9ecef;
+  text-decoration: none;
+}
 .nav ul li:hover{
   border-bottom: 4px solid rgb(0, 180, 216);
  transform-origin: scale( 100% 50%);
@@ -92,8 +96,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 18px 0px;
   color: white;
   font-size: 33px;
+ 
 }
 .row{
   display: flex;
@@ -105,3 +111,32 @@ body{
 .cards{
   padding: 0px 4px;
 }
+
+
+.btncontainer{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 62px;
+  padding: 47PX 13PX;
+}
+.btncontainer button{
+  padding: 15px 35px;
+  border-radius: 11px;
+  border: none;
+  font-weight: bold;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 42%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.spinner img{
+  height: 78px;
+  width: 78px;
+}
+
+
