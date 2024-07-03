@@ -15,6 +15,7 @@ export class Navbar extends Component {
 
         <div className='nav'>
           <ul>
+<<<<<<< HEAD
             <li><a  style={mode}  href="/about">Home</a></li>
             <li><a  style={mode} href="/about">Catagory</a></li>
             <li><a  style={mode} href="/about">sports</a></li>
@@ -22,6 +23,15 @@ export class Navbar extends Component {
             <li><a  style={mode} href="/about">food</a></li>
             <li><a  style={mode} href="/about">About</a></li>
             <img onClick={modechange} src={night} alt="" />
+=======
+            <li><a href="/about">Home</a></li>
+            <li><a href="/about">Catagory</a></li>
+            <li><a href="/about">sports</a></li>
+            <li><a href="/about">science</a></li>
+            <li><a href="/about">food</a></li>
+            <li><a href="/about">About</a></li>
+            <img src={night} alt="" />
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
           </ul>
         </div>
 

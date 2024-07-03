@@ -24,8 +24,13 @@ body{
   /* border-bottom-left-radius: 22px; */
 }
 .nav ul li a{
+<<<<<<< HEAD
   color: #e9ecef;
   text-decoration: none;
+=======
+  text-decoration: none;
+   color: #e9ecef;
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
 }
 .nav ul li:hover{
   border-bottom: 4px solid rgb(0, 180, 216);
@@ -116,6 +121,7 @@ body{
 .btncontainer{
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   margin: 0px 62px;
   padding: 47PX 13PX;
 }
@@ -124,6 +130,14 @@ body{
   border-radius: 11px;
   border: none;
   font-weight: bold;
+=======
+  margin: 0px 57px;
+}
+.btncontainer button{
+  padding: 8px 23px;
+  border-radius: 11px;
+  border: none;
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
 }
 .spinner{
   display: flex;

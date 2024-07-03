@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 
 export class News extends Component {
   static defaultprops = {
+<<<<<<< HEAD
     pageSize: 5,
     country: 'us',
     category: 'science',
@@ -19,6 +20,17 @@ export class News extends Component {
   }
 
 
+=======
+    pageSize:  5,
+    country:  'us',
+    category:'science'
+  }
+  static props = {
+    pageSize:  PropTypes.number,
+    country:  PropTypes.string,
+    category: PropTypes.string,
+  }
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
   constructor() {
     super();
     // console.log('This is a constructor')
@@ -95,7 +107,11 @@ export class News extends Component {
     return (
       <div style={full}>
         <div className='row-container' >
+<<<<<<< HEAD
           <h2 style={full} >NewsMonkey | There For You</h2>
+=======
+          <h2>NewsMonkey | There For You</h2>
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
           {this.state.loading && <Loading />}
           <div className="row">
             {!this.state.loading && this.state.articles.map((element) => {
@@ -110,8 +126,13 @@ export class News extends Component {
           </div>
 
           <div className="btncontainer">
+<<<<<<< HEAD
             <button style={btnclr} disabled={this.state.page <= 1} onClick={this.Previousbtn}>Previous</button>
             <button style={btnclr} onClick={this.Nextbtn}>Next</button>
+=======
+            <button disabled={this.state.page <= 1} onClick={this.Previousbtn}>Previous</button>
+            <button onClick={this.Nextbtn}>Next</button>
+>>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
           </div>
 
         </div>
