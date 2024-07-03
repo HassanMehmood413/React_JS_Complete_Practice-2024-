@@ -6,15 +6,19 @@ import PropTypes from 'prop-types'
 
 export class News extends Component {
   static defaultprops = {
-    pageSize:  5,
-    country:  'us',
-    category:'science'
+    pageSize: 5,
+    country: 'us',
+    category: 'science',
+    full: this.full,
+    btnclr: this.btnclr
   }
   static props = {
-    pageSize:  PropTypes.number,
-    country:  PropTypes.string,
+    pageSize: PropTypes.number,
+    country: PropTypes.string,
     category: PropTypes.string,
   }
+
+
   constructor() {
     super();
     // console.log('This is a constructor')
@@ -87,16 +91,17 @@ export class News extends Component {
   }
 
   render() {
+    const { full, btnclr } = this.props
     return (
-      <div>
+      <div style={full}>
         <div className='row-container' >
-          <h2>NewsMonkey | There For You</h2>
+          <h2 style={full} >NewsMonkey | There For You</h2>
           {this.state.loading && <Loading />}
           <div className="row">
             {!this.state.loading && this.state.articles.map((element) => {
 
               return <div className="cards" key={element.url}>
-                <Newslist title={element.title ? element.title.slice(0, 44) : ''} description={element.description ? element.description.slice(0, 88) : ''} newsUrl={element.urlToImage} newsID={element.url} />
+                <Newslist full={this.props.full} title={element.title ? element.title.slice(0, 44) : ''} description={element.description ? element.description.slice(0, 88) : ''} newsUrl={element.urlToImage} newsID={element.url} />
               </div>
             })}
 
@@ -105,8 +110,8 @@ export class News extends Component {
           </div>
 
           <div className="btncontainer">
-            <button disabled={this.state.page <= 1} onClick={this.Previousbtn}>Previous</button>
-            <button onClick={this.Nextbtn}>Next</button>
+            <button style={btnclr} disabled={this.state.page <= 1} onClick={this.Previousbtn}>Previous</button>
+            <button style={btnclr} onClick={this.Nextbtn}>Next</button>
           </div>
 
         </div>
