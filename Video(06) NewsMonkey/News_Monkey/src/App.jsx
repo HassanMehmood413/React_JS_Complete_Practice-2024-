@@ -66,13 +66,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
         <Navbar modechange={this.modechange} mode={this.state.mode} />
         <News btnclr = {this.state.btnclr} full={this.state.full} pageSize={5} country={'us'} category='science' />
-=======
-        <Navbar />
-        <News pageSize={5} country={'us'} category='science'/>
->>>>>>> 0478bfa5c1afa43538ed5cba92425f3e10877193
       </div>
     )
   }
