@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Newslist from './Newslist'
 import Loading, { loading } from './Loading'
 import PropTypes from 'prop-types'
-
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export class News extends Component {
   static defaultprops = {
@@ -10,7 +10,8 @@ export class News extends Component {
     country: 'us',
     category: 'science',
     full: this.full,
-    btnclr: this.btnclr
+    btnclr: this.btnclr,
+    totalResults: 70
   }
   static props = {
     pageSize: PropTypes.number,
@@ -25,7 +26,8 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
-      page: 1
+      page: 1,
+      totalResults: 0
     }
   }
 
@@ -40,55 +42,78 @@ export class News extends Component {
   //   // console.log(this.state)
   // }
 
-  async componentDidMount() {
-    try {
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2f88cd33c794463483df613cfdae11d7&page=1&pageSize=${this.props.pageSize}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      this.setState({
-        articles: data.articles, totalResults: data.totalResults
-      });
-    }
-    catch (e) {
-      console.log("something is not working");
-    }
-  }
 
-  Nextbtn = async () => {
-    if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 10))) {
-
-      console.log('next btn')
-      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2f88cd33c794463483df613cfdae11d7&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
-      this.setState({
-        loading: true
-      })
-      const res = await fetch(url);
-      const data = await res.json();
-      this.setState({
-        page: this.state.page + 1,
-        articles: data.articles,
-        loading: false
-      })
-    }
-
-
-  }
-  Previousbtn = async () => {
-    console.log('previous btn')
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2f88cd33c794463483df613cfdae11d7&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+  //Refactoring all the code and making it fast and short
+  async updatepage() {
+    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=149ba2bd9a5a4385894253bcd6b574ed&page=${this.state.page}&pageSize=${this.props.pageSize}`
     this.setState({
       loading: true
     })
     const res = await fetch(url);
     const data = await res.json();
+    // data.totalResults
+    console.log(data)
     this.setState({
-      page: this.state.page - 1,
       articles: data.articles,
+      totalResults: data.totalResults,
       loading: false
     })
+  }
+
+
+  async componentDidMount() {
+    // try {
+    //   let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=2f88cd33c794463483df613cfdae11d7&page=1&pageSize=${this.props.pageSize}`;
+    //   const res = await fetch(url);
+    //   const data = await res.json();
+    //   this.setState({
+    //     articles: data.articles, totalResults: data.totalResults
+    //   });
+    // }
+    // catch (e) {
+    //   console.log("something is not working");
+    // }
+    this.updatepage()
+    ///disabled={this.state.page + 1 > Math.ceil(this.state.totalResults/this.state.pageSize)} 
+  }
+
+  Nextbtn = async () => {
+    // console.log(data.totalResults)
+    await this.setState({
+      page: this.state.page + 1,
+      // articles: data.articles,
+    })
+    this.updatepage()
 
 
   }
+  Previousbtn = async () => {
+    console.log('previous btn')
+    await this.setState({
+      page: this.state.page - 1,
+      // articles: data.articles,
+    })
+    this.updatepage()
+  }
+
+
+  
+  fetchMoreData = async () => {
+    this.setState({page: this.state.page + 1})
+    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=149ba2bd9a5a4385894253bcd6b574ed&page=${this.state.page}&pageSize=${this.props.pageSize}`
+    this.setState({
+      loading: true
+    })
+    const res = await fetch(url);
+    const data = await res.json();
+    // data.totalResults
+    console.log(data)
+    this.setState({
+      articles: this.state.articles.concat(data.articles),
+      totalResults: data.totalResults,
+    })
+    
+  };
 
   render() {
     const { full, btnclr } = this.props
@@ -97,22 +122,28 @@ export class News extends Component {
         <div className='row-container' >
           <h2 style={full} >NewsMonkey | There For You</h2>
           {this.state.loading && <Loading />}
-          <div className="row">
-            {!this.state.loading && this.state.articles.map((element) => {
 
-              return <div className="cards" key={element.url}>
-                <Newslist full={this.props.full} title={element.title ? element.title.slice(0, 44) : ''} description={element.description ? element.description.slice(0, 88) : ''} newsUrl={element.urlToImage} newsID={element.url} />
-              </div>
-            })}
+          <InfiniteScroll
+            dataLength={this.state.articles.length}
+            next={this.fetchMoreData}
+            hasMore={this.state.articles !== this.state.totalResults}
+            // loader={<Loading/>}
+          >
 
 
 
-          </div>
+            <div className="row">
+              {this.state.articles.map((element) => {
 
-          <div className="btncontainer">
-            <button style={btnclr} disabled={this.state.page <= 1} onClick={this.Previousbtn}>Previous</button>
-            <button style={btnclr} onClick={this.Nextbtn}>Next</button>
-          </div>
+                return <div className="cards" key={element.url}>
+                  <Newslist full={this.props.full} title={element.title} description={element.description} newsUrl={element.urlToImage} newsID={element.url} author={element.author} publishedAt={element.publishedAt} />
+                </div>
+              })}
+
+
+
+            </div>
+          </InfiniteScroll>
 
         </div>
       </div>
