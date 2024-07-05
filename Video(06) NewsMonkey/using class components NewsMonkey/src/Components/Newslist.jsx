@@ -1,9 +1,10 @@
-import React  from 'react'
+import React, { Component } from 'react'
 
-const  Newslist =(props)=> {
+export class Newslist extends Component {
 
-    let { title, description, newsUrl, newsID , author , publishedAt} = props
-    let {full} = props
+  render() {
+    let { title, description, newsUrl, newsID , author , publishedAt} = this.props
+    let {full} = this.props
     return (
       <div className="card-container" style={full}>
 
@@ -19,7 +20,7 @@ const  Newslist =(props)=> {
         </div>
       </div>
     )
-  
+  }
 }
 
 export default Newslist

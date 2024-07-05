@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #495057;
+}
+.name{
+  margin-left: 26px;
+  font-size: 23px;
+}
+.nav ul{
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+}
+
+.nav ul li{
+  font-size: 23px;
+  padding: 6px 7px;
+  margin: 0px 39px;
+  list-style: none;
+  cursor: pointer;
+  /* border-bottom-left-radius: 22px; */
+}
+.nav ul li a{
+  color: #e9ecef;
+  text-decoration: none;
+}
+.nav ul li:hover{
+  border-bottom: 4px solid rgb(0, 180, 216);
+ transform-origin: scale( 100% 50%);
+}
+.nav ul li img{
+  height: 37px;
+  width: 38px;
+  margin-left: 17px;
+}
+.navbar{
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e9ecef;
+  background: rgb(149 149 149);
+  font-family: "Playfair Display", serif;
+}
+.newslist{
+  color: white;
+}
+.card{
+  margin: 25px 15px;
+  padding: 7px 9px;
+  background: rgba(225, 225, 225, .2);
+  height: 519px;
+  box-sizing: border-box;
+  width: 408px;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(225, 225, 225, .1);
+  border-radius: 15px;
+  box-shadow: -1px 2px 15px 4px rgb(0 180 216 / 28%), 1px 1px 16px 0px #01ccff4a;
+}
+
+.card img{
+  height: 219px;
+  width: 100%;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+}
+.card-body{
+  font-size: 16px;
+  padding: 0px 8px;
+  text-align: justify;
+  color: white;
+  margin: 15px 7px;
+}
+.card-body button{
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  bottom: 19px;
+  right: 24px;
+  border-radius: 7px;
+  background: rgb(23 173 203);
+  padding: 9px 15px;
+
+}
+.card-body button:hover{
+  background: rgb(0 180 216);
+  transition: all 0.5s;
+}
+
+
+/* Display cards  */
+.row-container h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0px;
+  color: white;
+  font-size: 33px;
+ 
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.cards{
+  padding: 0px 4px;
+}
+
+
+.btncontainer{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 62px;
+  padding: 47PX 13PX;
+}
+.btncontainer button{
+  padding: 15px 35px;
+  border-radius: 11px;
+  border: none;
+  font-weight: bold;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.spinner img{
+  height: 78px;
+  width: 78px;
+}
+
+
