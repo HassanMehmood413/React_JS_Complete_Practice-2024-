@@ -1,0 +1,15 @@
+first of all, search on google "react top loadin bar"
+2) It gives you an npm package so install it
+3) go to the github page link that is available in the npm package website
+4) Us the state method 
+5)  <LoadingBar
+        height={4}
+        color='#f11946'
+        progress={this.state.progress}
+        
+        />
+6) Us this at the top of navbar or bottom as you like
+7) using state method in class component or hooks method in functional component
+8) define the initial progress like state to 0 
+9) then setstate the progress in the code where data is fetching so top loading bar will appear
+10) for further info see the code of NewsMonkey

@@ -9,16 +9,15 @@ export class News extends Component {
     pageSize: 5,
     country: 'us',
     category: 'science',
-    full: this.full,
-    btnclr: this.btnclr,
-    totalResults: 70
+    // full: this.full,
+    // btnclr: this.btnclr,
+    totalResults: 70,
   }
   static props = {
     pageSize: PropTypes.number,
     country: PropTypes.string,
     category: PropTypes.string,
   }
-
 
   constructor() {
     super();
@@ -45,7 +44,7 @@ export class News extends Component {
 
   //Refactoring all the code and making it fast and short
   async updatepage() {
-    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=149ba2bd9a5a4385894253bcd6b574ed&page=${this.state.page}&pageSize=${this.props.pageSize}`
+    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page}&pageSize=${this.props.pageSize}`
     this.setState({
       loading: true
     })
@@ -97,37 +96,42 @@ export class News extends Component {
   }
 
 
-  
   fetchMoreData = async () => {
+    // console.log(this.props.progress)
+    this.props.setprogress(10)
     this.setState({page: this.state.page + 1})
-    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=149ba2bd9a5a4385894253bcd6b574ed&page=${this.state.page}&pageSize=${this.props.pageSize}`
+    
+    const url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page}&pageSize=${this.props.pageSize}`
+    this.props.setprogress(30)
     this.setState({
       loading: true
     })
     const res = await fetch(url);
     const data = await res.json();
-    // data.totalResults
-    console.log(data)
+    this.props.setprogress(50)
     this.setState({
       articles: this.state.articles.concat(data.articles),
       totalResults: data.totalResults,
+      loading: false
     })
+    this.props.setprogress(100)
     
   };
 
   render() {
-    const { full, btnclr } = this.props
+    const { full, btnclr,progress } = this.props
     return (
       <div style={full}>
         <div className='row-container' >
           <h2 style={full} >NewsMonkey | There For You</h2>
-          {this.state.loading && <Loading />}
+          {/* {this.state.loading && <Loading />} */} 
+          {/*  this problem causes loader to repeat in the end after fetching is complete */}
 
           <InfiniteScroll
             dataLength={this.state.articles.length}
             next={this.fetchMoreData}
             hasMore={this.state.articles !== this.state.totalResults}
-            // loader={<Loading/>}
+            loader={ this.state.loading && <Loading/>}
           >
 
 

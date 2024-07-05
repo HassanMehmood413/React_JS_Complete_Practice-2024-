@@ -3,8 +3,12 @@ import React, { Component } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
 import News from './Components/News'
+import LoadingBar from 'react-top-loading-bar'
 
 export class App extends Component {
+  apikey = import.meta.env.VITE_Full_API_KEY
+
+
   modechange = () => {
     if(this.state.mode.color == 'black'){
       this.setState({
@@ -57,17 +61,32 @@ export class App extends Component {
       btnclr:{
         background:'grey',
         color:'white'
-      }
+      },
     }
 
   }
+
+state = {
+  progress : 0
+}
+setprogress = (progress)=>{
+  this.setState({
+    progress: progress
+  })
+}
 
 
   render() {
     return (
       <div>
         <Navbar modechange={this.modechange} mode={this.state.mode} />
-        <News btnclr = {this.state.btnclr} full={this.state.full} pageSize={5} country={'us'} category='science' totalResults = {70} />
+        <LoadingBar
+        height={4}
+        color='#f11946'
+        progress={this.state.progress}
+        
+        />
+        <News btnclr = {this.state.btnclr} full={this.state.full} pageSize={5} country={'us'} category='science' totalResults = {70} setprogress ={this.setprogress} apikey = {this.apikey}/>
       </div>
     )
   }

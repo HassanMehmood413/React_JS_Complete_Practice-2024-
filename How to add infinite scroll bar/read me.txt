@@ -1,0 +1,6 @@
+1) To add infinite scroll bar in the react app go to google and search "React infinite scroll component"
+2) Then use the npm package in the vs code
+3) In the npm website go down and search the live examples of infinte scroll bar
+4) when you click on it it straights you to this website "https://codesandbox.io/s/yk7637p62z?file=/src/index.js:306-554"
+5) I provide this link just for you remembering
+6)Then go to the NewsMonkey code and see this on news.jsx
