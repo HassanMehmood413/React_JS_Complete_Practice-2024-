@@ -3,7 +3,7 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: #495057;
+  /* background-color: #495057; */
 }
 .name{
   margin-left: 26px;
@@ -38,12 +38,16 @@ body{
 }
 .navbar{
   height: 77px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #e9ecef;
   background: rgb(149 149 149);
   font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .newslist{
   color: white;
@@ -100,6 +104,7 @@ body{
   padding: 18px 0px;
   color: white;
   font-size: 33px;
+  margin-top: 111px;
  
 }
 .row{

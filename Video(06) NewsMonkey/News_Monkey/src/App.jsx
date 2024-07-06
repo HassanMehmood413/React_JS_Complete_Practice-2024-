@@ -17,7 +17,7 @@ const App = (props) => {
   })
   
   const [full, setfull] = useState({
-    backgroundColor: document.body.style.backgroundColor = "white",
+    // backgroundColor: document.body.style.backgroundColor = "white",
     color: document.body.style.color = "black"
   })
 
